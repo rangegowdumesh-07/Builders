@@ -632,7 +632,7 @@ function applyTranslations(){
      POST {base}/send-otp   { phone }        -> { success: true }
      POST {base}/verify-otp { phone, code }  -> { verified: true|false }
 ------------------------------------------------------------------------- */
-const SILK_CONNECT_API_BASE = "http://localhost:3000/api"; // TODO: point this at your real OTP backend
+const SILK_CONNECT_API_BASE = "https://builders-gely.onrender.com/api"; // TODO: point this at your real OTP backend
 
 async function apiSendOtp(phone){
   const res = await fetch(`${SILK_CONNECT_API_BASE}/send-otp`, {
@@ -1792,3 +1792,5 @@ document.getElementById('hiddenCameraInput').addEventListener('change', function
 
 </body>
 </html>
+
+
